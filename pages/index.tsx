@@ -147,14 +147,14 @@ export default function Home() {
     textAreaRef.current?.focus();
   }, []);
 
-  useEffect(() => {
-    async function loadData() {
-      const { data } = await supabaseClient.from('messages')?.select('*');
-      setSupaData(data);
-    }
+  // useEffect(() => {
+  //   async function loadData() {
+  //     const { data } = await supabaseClient.from('messages')?.select('*');
+  //     setSupaData(data);
+  //   }
 
-    if (user) loadData();
-  }, [user]);
+  //   if (user) loadData();
+  // }, [user]);
 
   const links = data.map((item) => (
     <a
@@ -296,10 +296,10 @@ export default function Home() {
       >
         <Container fluid>
           <Title order={1}>welcome to aidfinder!</Title>
-          <Title order={4}>
+          {/* <Title order={4}>
             i'm your guy for anything related to government benefits, so ask
             away!
-          </Title>
+          </Title> */}
           {/* <Title order={6}>
             *currently only supporting NC medicaid, more to come :)
           </Title> */}
